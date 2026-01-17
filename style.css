@@ -90,7 +90,7 @@ header.relative {
 
 /* Ensure H1 in the hero is white for contrast */
 header h1 {
-    font-family: 'CaviarDreams-Bold', sans-serif;
+    font-family: 'CaviarDreams_Bold', sans-serif;
     font-weight: bold;
     font-size: 4rem;
     letter-spacing: 0.16em;
