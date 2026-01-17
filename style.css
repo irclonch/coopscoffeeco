@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'CaviarDreams_Bold';
+    src: url('./fonts/CaviarDreams_Bold.ttf') format('truetype');
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('./fonts/CaviarDreams.ttf') format('truetype');
+    font-weight: normal;
+    text-transform: lowercase;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('./fonts/proximanova_regular.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'CaviarDreams', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.16em; /* Kerning: 160 */
+    text-transform: lowercase;
+}
+
+h2 {
+    font-family: 'CaviarDreams', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.08em; /* Kerning: 80 */
+    text-transform: lowercase;
+}
+
+body {
+    font-family: 'ProximaNova', sans-serif;
+}
+
+        :root {
+            --navy: #142E3d;
+            --orange: #E49744;
+            --gray-green: #526C68;
+            --aqua: #72D1D6;
+            --cream: #FFF1E0;
+        }
+
+        h1 { 
+            font-family: 'CaviarDreams_Bold', sans-serif; 
+            font-weight: bold;
+            letter-spacing: 0.16em; /* Kerning 160 */
+            color: var(--navy);
+            text-transform: lowercase;
+        }
+        h2, h3 { 
+            font-family: 'CaviarDreams_Bold', sans-serif; 
+            font-weight: normal;
+            letter-spacing: 0.08em; /* Kerning 80 */
+            color: var(--navy);
+            text-transform: lowercase;
+        }
+        body { 
+            font-family: 'ProximaNova', sans-serif; 
+            background-color: #F8F8F8; /* Light neutral to let cream accents pop */
+        }
+
+        .bg-navy { background-color: var(--navy); }
+        .bg-orange { background-color: var(--orange); }
+        .bg-aqua { background-color: var(--aqua); }
+        .bg-cream { background-color: var(--cream); }
+        .bg-gray { background-color: var(--gray-green); }
+        .text-navy { color: var(--navy); }
+        .text-orange { color: var(--orange); }
+        .text-cream { color: var(--cream); }
+
+header.relative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* This creates the Navy tint over the photo */
+.bg-gray\/40 {
+    background-color: rgba(82, 108, 104, 0.4); /* Your Gray-Green at 40% opacity */
+}
+.bg-navy\/40 {
+    background-color: rgba(20, 46, 61, 0.4);
+}
+.bg-cream {
+    background-color: rgba(255, 241, 224, 0.2);
+}
+
+/* Ensure H1 in the hero is white for contrast */
+header h1 {
+    font-family: 'CaviarDreams-Bold', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: 0.16em;
+    text-transform: lowercase;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #FFF1E0; /* Your brand Cream */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Adds a subtle pop */
+}    
