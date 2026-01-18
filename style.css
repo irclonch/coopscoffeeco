@@ -20,7 +20,7 @@
 h1 {
     font-family: 'CaviarDreams_Bold', sans-serif;
     font-weight: normal;
-    letter-spacing: 0.16em; /* Kerning: 160 */
+    letter-spacing: 0.08em; /* Kerning: 160 */
     text-transform: lowercase;
 }
 
