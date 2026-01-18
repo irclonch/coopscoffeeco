@@ -110,11 +110,6 @@ header h1 {
         margin-bottom: 1rem;
     }
 
-    p {
-        font-size: 0.8rem !important;
-        line-height: 1.4;
-    }
-
     /* Adjust the button size so it doesn't overwhelm the mobile screen */
     header a.inline-block {
         padding: 12px 30px;
