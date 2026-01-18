@@ -113,7 +113,6 @@ header h1 {
     p {
         font-size: 1.1rem !important;
         line-height: 1.4;
-        padding: 0 10px; /* Adds a little breathing room on the sides */
     }
 
     /* Adjust the button size so it doesn't overwhelm the mobile screen */
