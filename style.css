@@ -99,4 +99,26 @@ header h1 {
     margin-bottom: 1.5rem;
     color: #FFF1E0; /* Your brand Cream */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Adds a subtle pop */
-}    
+}
+
+@media (max-width: 768px) {
+    
+    header h1 {
+        /* Adjust these numbers until they look right on your phone */
+        font-size: 2.5rem !important; 
+        letter-spacing: 0.10em !important; /* Slightly tighter for smaller screens */
+        margin-bottom: 1rem;
+    }
+
+    header p {
+        font-size: 1.1rem !important;
+        line-height: 1.4;
+        padding: 0 10px; /* Adds a little breathing room on the sides */
+    }
+
+    /* Adjust the button size so it doesn't overwhelm the mobile screen */
+    header a.inline-block {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
