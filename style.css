@@ -2,14 +2,12 @@
     font-family: 'CaviarDreams_Bold';
     src: url('./fonts/CaviarDreams_Bold.ttf') format('truetype');
     font-weight: bold;
-    text-transform: lowercase;
 }
 
 @font-face {
     font-family: 'CaviarDreams';
     src: url('./fonts/CaviarDreams.ttf') format('truetype');
     font-weight: normal;
-    text-transform: lowercase;
 }
 
 @font-face {
@@ -17,79 +15,57 @@
     src: url('./fonts/proximanova_regular.ttf') format('truetype');
 }
 
-h1 {
-    font-family: 'CaviarDreams_Bold', sans-serif;
-    font-weight: normal;
-    letter-spacing: 0.08em; /* Kerning: 160 */
+:root {
+    --navy: #142E3d;
+    --orange: #E49744;
+    --gray-green: #526C68;
+    --aqua: #72D1D6;
+    --cream: #FFF1E0;
+}
+
+h1 { 
+    font-family: 'CaviarDreams_Bold', sans-serif; 
+    font-weight: bold;
+    letter-spacing: 0.16em;
+    color: var(--navy);
     text-transform: lowercase;
 }
 
-h2 {
-    font-family: 'CaviarDreams', sans-serif;
+h2, h3 { 
+    font-family: 'CaviarDreams_Bold', sans-serif; 
     font-weight: normal;
-    letter-spacing: 0.08em; /* Kerning: 80 */
+    letter-spacing: 0.08em;
+    color: var(--navy);
     text-transform: lowercase;
 }
 
-body {
-    font-family: 'ProximaNova', sans-serif;
+body { 
+    font-family: 'ProximaNova', sans-serif; 
+    background-color: #F8F8F8;
 }
 
-        :root {
-            --navy: #142E3d;
-            --orange: #E49744;
-            --gray-green: #526C68;
-            --aqua: #72D1D6;
-            --cream: #FFF1E0;
-        }
+/* Color utility classes */
+.bg-navy { background-color: var(--navy); }
+.bg-orange { background-color: var(--orange); }
+.bg-aqua { background-color: var(--aqua); }
+.bg-cream { background-color: var(--cream); }
+.bg-gray { background-color: var(--gray-green); }
+.text-navy { color: var(--navy); }
+.text-orange { color: var(--orange); }
+.text-cream { color: var(--cream); }
 
-        h1 { 
-            font-family: 'CaviarDreams_Bold', sans-serif; 
-            font-weight: bold;
-            letter-spacing: 0.16em; /* Kerning 160 */
-            color: var(--navy);
-            text-transform: lowercase;
-        }
-        h2, h3 { 
-            font-family: 'CaviarDreams_Bold', sans-serif; 
-            font-weight: normal;
-            letter-spacing: 0.08em; /* Kerning 80 */
-            color: var(--navy);
-            text-transform: lowercase;
-        }
-        body { 
-            font-family: 'ProximaNova', sans-serif; 
-            background-color: #F8F8F8; /* Light neutral to let cream accents pop */
-        }
-
-        .bg-navy { background-color: var(--navy); }
-        .bg-orange { background-color: var(--orange); }
-        .bg-aqua { background-color: var(--aqua); }
-        .bg-cream { background-color: var(--cream); }
-        .bg-gray { background-color: var(--gray-green); }
-        .text-navy { color: var(--navy); }
-        .text-orange { color: var(--orange); }
-        .text-cream { color: var(--cream); }
-
+/* Header/Hero styling */
 header.relative {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* This creates the Navy tint over the photo */
-.bg-gray\/40 {
-    background-color: rgba(82, 108, 104, 0.4); /* Your Gray-Green at 40% opacity */
-}
-.bg-navy\/40 {
+.bg-navy-overlay {
     background-color: rgba(20, 46, 61, 0.4);
 }
-.bg-cream {
-    background-color: rgba(255, 241, 224, 0.2);
-}
 
-/* Ensure H1 in the hero is white for contrast */
-header h1 {
+.hero-title {
     font-family: 'CaviarDreams_Bold', sans-serif;
     font-weight: normal;
     font-size: 4rem;
@@ -97,22 +73,76 @@ header h1 {
     text-transform: lowercase;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: #FFF1E0; /* Your brand Cream */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Adds a subtle pop */
+    color: #FFF1E0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
+/* Navigation links - change to orange on hover */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--orange);
+}
+
+.nav-button {
+    background-color: var(--navy);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: var(--orange);
+}
+
+/* Page buttons - enlarge on hover */
+.page-button {
+    display: inline-block;
+    background-color: var(--orange);
+    color: white;
+    padding: 1rem 2.5rem;
+    margin-top: 2rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: transform 0.3s ease;
+}
+
+.page-button:hover {
+    transform: scale(1.05);
+}
+
+.page-button-small {
+    display: inline-block;
+    background-color: var(--navy);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.875rem;
+    transition: transform 0.3s ease;
+}
+
+.page-button-small:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile responsive */
 @media (max-width: 768px) {
-    
-    h1 {
-        /* Adjust these numbers until they look right on your phone */
+    .hero-title {
         font-size: 2.5rem !important; 
-        letter-spacing: 0.10em !important; /* Slightly tighter for smaller screens */
+        letter-spacing: 0.10em !important;
         margin-bottom: 1rem;
     }
 
-    /* Adjust the button size so it doesn't overwhelm the mobile screen */
-    header a.inline-block {
-        padding: 12px 30px;
+    .page-button {
+        padding: 0.75rem 1.875rem;
         font-size: 0.9rem;
     }
 }
