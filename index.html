@@ -143,7 +143,7 @@
             <!-- Private Standard -->
             <div class="bg-cream rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div class="text-center mb-6">
-                    <h3 class="text-2xl text-navy mb-3">private standard</h3>
+                    <h3 class="text-2xl text-navy mb-3">private<br>standard</h3>
                     <div class="w-16 h-1 bg-orange mx-auto"></div>
                 </div>
                 <ul class="space-y-3 text-navy mb-6">
@@ -170,7 +170,7 @@
             <!-- Private Premium -->
             <div class="bg-orange rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div class="text-center mb-6">
-                    <h3 class="text-2xl text-cream mb-3">private premium</h3>
+                    <h3 class="text-2xl text-cream mb-3">private<br>premium</h3>
                     <div class="w-16 h-1 bg-cream mx-auto"></div>
                 </div>
                 <ul class="space-y-3 text-cream mb-6">
@@ -247,7 +247,7 @@
         <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <!-- Hot Espresso Drinks -->
             <div class="bg-navy rounded-xl p-8 shadow-lg">
-                <h3 class="text-2xl text-cream mb-6 text-center">hot espresso drinks</h3>
+                <h3 class="text-2xl text-orange mb-6 text-center">hot espresso drinks</h3>
                 <div class="space-y-4">
                     <div class="flex justify-between items-center border-b border-slate-200 pb-3">
                         <div>
@@ -296,7 +296,7 @@
 
             <!-- Cold Drinks -->
             <div class="bg-navy rounded-xl p-8 shadow-lg">
-                <h3 class="text-2xl text-navy mb-6 text-center">cold drinks</h3>
+                <h3 class="text-2xl text-orange mb-6 text-center">cold drinks</h3>
                 <div class="space-y-4">
                     <div class="flex justify-between items-center border-b border-slate-200 pb-3">
                         <div>
@@ -339,22 +339,22 @@
                     <p class="font-bold mb-2">add-ons</p>
                     <ul class="space-y-2 text-sm">
                         <li class="flex justify-between">
-                            <span>Extra espresso shot</span>
+                            <span>Extra Shot</span>
                             <span class="text-orange">$1.00</span>
                         </li>
                         <li class="flex justify-between">
-                            <span>Flavored syrup</span>
+                            <span>Premium Syrupy</span>
                             <span class="text-orange">$0.75</span>
                         </li>
                         <li class="flex justify-between">
-                            <span>Alternative milk</span>
+                            <span>Alternative Milk</span>
                             <span class="text-orange">$1.00</span>
                         </li>
                     </ul>
                 </div>
                 <div>
                     <p class="font-bold mb-2">available options</p>
-                    <ul class="space-y-1 text-sm">
+                    <ul class="space-y-2 text-sm">
                         <li>• Vanilla, Caramel, Hazelnut</li>
                         <li>• Oat, Almond, Coconut Milk</li>
                         <li>• Decaf available upon request</li>
@@ -366,143 +366,128 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-10 bg-navy">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16">
-                <h2 class="text-4xl text-orange mb-6">let's connect</h2>
-                <p class="text-lg text-cream mx-auto leading-relaxed">
-                    Ready to bring exceptional coffee to your next event? Fill out the form below and we'll get back to you within 24 hours.
-                </p>
-            </div>
+     <section id="contact" class="py-20 px-10 bg-navy">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-16 text-center">
+            <h2 class="text-4xl text-orange mb-6">let's connect</h2>
+            <p class="text-lg text-cream max-w-2xl mx-auto leading-relaxed">
+                Ready to bring exceptional coffee to your next event? Fill out the form below and we'll get back to you within 24 hours.
+            </p>
+        </div>
 
-            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <!-- Contact Form -->
-                <div class="bg-cream rounded-xl p-8 shadow-lg">
-                    <form action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
-                        <div class="space-y-4">
-                            <!-- Name -->
-                            <div>
-                                <label for="name" class="block text-navy font-bold mb-2 text-sm">Name *</label>
-                                <input type="text" id="name" name="name" required 
-                                       class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
-                            </div>
-
-                            <!-- Email -->
-                            <div>
-                                <label for="email" class="block text-navy font-bold mb-2 text-sm">Email *</label>
-                                <input type="email" id="email" name="email" required 
-                                       class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
-                            </div>
-
-                            <!-- Phone -->
-                            <div>
-                                <label for="phone" class="block text-navy font-bold mb-2 text-sm">Phone *</label>
-                                <input type="tel" id="phone" name="phone" required 
-                                       class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
-                            </div>
-
-                            <!-- Preferred Contact Method -->
-                            <div>
-                                <label for="contact-method" class="block text-navy font-bold mb-2 text-sm">Preferred Contact Method *</label>
-                                <select id="contact-method" name="contact-method" required 
-                                        class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
-                                    <option value="">Select one...</option>
-                                    <option value="email">Email</option>
-                                    <option value="phone">Phone Call</option>
-                                    <option value="text">Text Message</option>
-                                </select>
-                            </div>
-
-                            <!-- Event Date -->
-                            <div>
-                                <label for="event-date" class="block text-navy font-bold mb-2 text-sm">Event Date</label>
-                                <input type="date" id="event-date" name="event-date" 
-                                       class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
-                            </div>
-
-                            <!-- Event Type -->
-                            <div>
-                                <label for="event-type" class="block text-navy font-bold mb-2 text-sm">Event Type</label>
-                                <select id="event-type" name="event-type" 
-                                        class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
-                                    <option value="">Select one...</option>
-                                    <option value="corporate">Corporate Event</option>
-                                    <option value="private">Private Gathering</option>
-                                    <option value="popup">Public Pop-Up</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-
-                            <!-- Number of Guests -->
-                            <div>
-                                <label for="guests" class="block text-navy font-bold mb-2 text-sm">Number of Guests</label>
-                                <input type="number" id="guests" name="guests" min="1" 
-                                       class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
-                            </div>
-
-                            <!-- Message -->
-                            <div>
-                                <label for="message" class="block text-navy font-bold mb-2 text-sm">Additional Details</label>
-                                <textarea id="message" name="message" rows="4" 
-                                          class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange"></textarea>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button type="submit" class="w-full bg-orange text-white py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform">
-                                Send Request
-                            </button>
+        <!-- Contact Form - Centered -->
+        <div class="max-w-2xl mx-auto mb-12">
+            <div class="bg-cream rounded-xl p-8 shadow-lg">
+                <form action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
+                    <div class="space-y-4">
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-navy font-bold mb-2 text-sm">Name *</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
                         </div>
-                    </form>
-                </div>
 
-                <!-- Contact Info -->
-                <div class="space-y-8">
-                    <div class="bg-orange rounded-xl p-8 text-cream">
-                        <h3 class="text-2xl text-cream mb-6">get in touch</h3>
-                        <div class="space-y-6">
-                            <div>
-                                <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Email</p>
-                                <a href="mailto:coopscoffeeco@gmail.com" class="text-cream text-base hover:text-orange transition block">
-                                    coopscoffeeco@gmail.com
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-navy font-bold mb-2 text-sm">Email *</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <label for="phone" class="block text-navy font-bold mb-2 text-sm">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required 
+                                   class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                        </div>
+
+                        <!-- Preferred Contact Method -->
+                        <div>
+                            <label for="contact-method" class="block text-navy font-bold mb-2 text-sm">Preferred Contact Method *</label>
+                            <select id="contact-method" name="contact-method" required 
+                                    class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                                <option value="">Select one...</option>
+                                <option value="email">Email</option>
+                                <option value="phone">Phone Call</option>
+                                <option value="text">Text Message</option>
+                            </select>
+                        </div>
+
+                        <!-- Event Date -->
+                        <div>
+                            <label for="event-date" class="block text-navy font-bold mb-2 text-sm">Event Date</label>
+                            <input type="date" id="event-date" name="event-date" 
+                                   class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                        </div>
+
+                        <!-- Event Type -->
+                        <div>
+                            <label for="event-type" class="block text-navy font-bold mb-2 text-sm">Event Type</label>
+                            <select id="event-type" name="event-type" 
+                                    class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                                <option value="">Select one...</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="private">Private Gathering</option>
+                                <option value="popup">Public Pop-Up</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Number of Guests -->
+                        <div>
+                            <label for="guests" class="block text-navy font-bold mb-2 text-sm">Number of Guests</label>
+                            <input type="number" id="guests" name="guests" min="1" 
+                                   class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-navy font-bold mb-2 text-sm">Additional Details</label>
+                            <textarea id="message" name="message" rows="4" 
+                                      class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-orange text-white py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform">
+                            Send Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Contact Info - Below Form -->
+        <div class="max-w-2xl mx-auto">
+            <div class="bg-orange rounded-xl p-8 text-cream">
+                <h3 class="text-2xl text-cream mb-6 text-center">get in touch</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Email</p>
+                        <div class="space-y-2">
+                            <a href="mailto:coopscoffeeco@gmail.com" class="text-cream text-base hover:text-navy transition block">
+                                coopscoffeeco@gmail.com
+                            </a>
+                            <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Phone</p>
+                            <div class="space-y-2">
+                                <a href="tel:+1234567890" class="text-cream text-base hover:text-navy transition block">
+                                    (123) 456-7890
                                 </a>
                             </div>
-                            <div>
-                                <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Service Area</p>
-                                <p class="text-cream text-base mb-2">All of North Carolina</p>
-                                <p class="text-sm opacity-70">Including Winston-Salem, Charlotte, Raleigh, Durham, Greensboro, and more.</p>
-                            </div>
-                        </div>
                     </div>
-
-                    <div class="bg-cream rounded-xl p-8">
-                        <h3 class="text-2xl text-navy mb-4">response time</h3>
-                        <p class="text-navy leading-relaxed">
-                            We typically respond to all inquiries within 24 hours. For urgent requests or questions, feel free to reach out directly via email.
-                        </p>
-                    </div>
-
-                    <div class="bg-white rounded-xl p-8 shadow-lg">
-                        <h3 class="text-2xl text-navy mb-4">follow along</h3>
-                        <p class="text-navy mb-4">See what we're up to on social media:</p>
-                        <div class="space-y-2">
-                            <a href="https://www.instagram.com/cooperscoffeenc" 
-                               class="block text-orange hover:text-navy transition font-bold">
-                                @cooperscoffeenc on Instagram
-                            </a>
-                            <a href="https://www.tiktok.com/@cooperscoffeenc" 
-                               class="block text-orange hover:text-navy transition font-bold">
-                                @cooperscoffeenc on TikTok
-                            </a>
-                            <a href="https://www.facebook.com/cooperscoffeenc" 
-                               class="block text-orange hover:text-navy transition font-bold">
-                                @cooperscoffeenc on Facebook
-                            </a>
+                </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Follow Along</p>
+                        <div class="space-y-1">
+                            <a href="https://www.instagram.com/cooperscoffeenc" class="block hover:text-navy transition">Instagram</a>
+                            <a href="https://www.tiktok.com/@cooperscoffeenc" class="block hover:text-navy transition">TikTok</a>
+                            <a href="https://www.facebook.com/cooperscoffeenc" class="block hover:text-navy transition">Facebook</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer class="bg-cream py-10 px-10 text-navy">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
