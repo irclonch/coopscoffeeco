@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Cooper's Coffee Co.</title>
+    <meta name="description" content="Meet the family behind Cooper's Coffee Co. Learn about Isaiah, Hannah, and Cooper - and discover why we're committed to bringing quality coffee to you.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+<body class="text-slate-900">
+
+    <nav class="flex justify-between items-center px-10 py-6 bg-cream border-b border-slate-100">
+        <a href="/" class="flex items-center">
+            <img src="./images/logo.png" alt="Cooper's Coffee Co. Logo" class="h-auto w-40">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center space-x-10 uppercase tracking-widest text-xs font-bold text-navy">
+            <a href="/about" class="nav-link">About</a>
+            <a href="/#services" class="nav-link">The Service</a>
+            <a href="/#menu" class="nav-link">Menu</a>
+            <a href="/#contact" class="nav-button">Book the Cart</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="hamburger" class="md:hidden flex flex-col space-y-1.5 z-50">
+            <span class="block w-7 h-0.5 bg-navy"></span>
+            <span class="block w-7 h-0.5 bg-navy"></span>
+            <span class="block w-7 h-0.5 bg-navy"></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-navy z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="/#services" class="mobile-menu-link text-cream text-2xl uppercase tracking-widest">The Service</a>
+            <a href="/#menu" class="mobile-menu-link text-cream text-2xl uppercase tracking-widest">Menu</a>
+            <a href="/#contact" class="mobile-menu-link text-orange text-2xl uppercase tracking-widest font-bold">Book the Cart</a>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('translate-x-full');
+            }
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <header class="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <img src="./images/about_hero.jpg" 
+             alt="Isaiah and Hannah with Cooper" 
+             class="absolute z-0 w-full h-full object-cover">
+        
+        <div class="absolute z-10 w-full h-full bg-navy-overlay"></div>
+
+        <div class="relative z-20 text-center px-10">
+            <h1 class="text-white hero-title">our story</h1>
+            <p class="text-cream mt-4 max-w-xl mx-auto">
+                the people and the pup behind the coffee
+            </p>
+        </div>
+    </header>
+
+    <!-- Isaiah & Hannah Section -->
+    <section class="py-16 px-10 bg-cream">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <h2 class="text-4xl text-orange">isaiah & hannah</h2>
+                <p class="text-lg text-navy leading-relaxed">
+                    Our story began on a rainy night in 2017 when a mutual friend set us up for a movie date to see Beauty and the Beast. The rest, as they say, is history. We dated for the next five years, building a life together filled with coffee, laughter, and dreams. In 2022, I proposed to Hannah on her birthday, and we tied the knot in 2023.
+                </p>
+                <p class="text-lg text-navy leading-relaxed">
+                    Hannah is my rock and the backbone of Cooper's Coffee Co. Without her support, encouragement, and belief in this dream, none of this would be possible. She's not just my partner in life—she's my partner in every cup we serve.
+                </p>
+            </div>
+
+            <div class="relative">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] bg-slate-200 flex items-center justify-center">
+                    <img src="./images/isaiah_hannah_about.jpg" alt="Isaiah and Hannah Clonch" class="h-full w-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cooper Section -->
+    <section class="py-16 px-10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative md:order-1">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] bg-slate-200 flex items-center justify-center">
+                    <img src="./images/cooper.jpg" alt="Cooper the blue heeler" class="h-full w-full object-cover">
+                </div>
+            </div>
+
+            <div class="space-y-6 md:order-2">
+                <h2 class="text-4xl text-orange">meet cooper</h2>
+                <p class="text-lg text-navy leading-relaxed">
+                    Cooper is our blue heeler and the heart of everything we do. He loves frisbees and car rides more than anything in the world, and he brings us more joy than we could ever put into words. He's not just our dog—he's our best friend.
+                </p>
+                <p class="text-lg text-navy leading-relaxed">
+                    When it came time to name the business, there was only one choice. Cooper reminds us every single day that showing up matters. Our brand colors are a tribute to him: the navy blue represents his breed, and the golden orange reflects the color of his eyebrows. Every cup we pour carries a little piece of what Cooper teaches us—consistency, loyalty, and being there when it counts.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Journey Section -->
+    <section class="py-16 px-10 bg-cream">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl text-orange mb-8">the journey</h2>
+            <div class="space-y-6 text-lg text-navy leading-relaxed text-left">
+                <p>
+                    Like many great ideas, ours started with frustration. We were tired of driving 15 to 30 minutes—sometimes more—just to get a quality cup of coffee. It felt like we were wasting valuable time and money for something that should be simple and accessible.
+                </p>
+                <p>
+                    One day, I stumbled across an espresso machine at a great price and decided to take the plunge. After getting comfortable with it, we invited family over for breakfast and coffee. That morning changed everything. We fell in love with what we started calling "playing cafe"—the joy of serving coffee to people we care about, the conversations that followed, the warmth of bringing people together.
+                </p>
+                <p>
+                    We wanted to do more of that. And so, Cooper's Coffee Co. was born—not just as a business, but as a way to bring that same warmth, quality, and connection to others. We wanted to meet people where they are, so they wouldn't have to drive across town or settle for less.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-20 px-10 bg-navy">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Mission -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-3xl text-orange mb-6">our mission</h3>
+                    <p class="text-lg text-navy leading-relaxed">
+                        To meet people where they are and serve consistent, quality coffee—especially when and where it's needed. This isn't just about coffee. It's about showing up when others don't. Whether it's early mornings, late nights, or somewhere in between, we want to be there with something familiar and consistent in your hands.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="bg-orange rounded-xl p-8 shadow-lg">
+                    <h3 class="text-3xl text-cream mb-6">our vision</h3>
+                    <p class="text-lg text-cream leading-relaxed">
+                        We're starting with mobile catering, but we're dreaming bigger. Our vision is to grow into a community staple—eventually opening a 24-hour cafe that serves all hours. A place where people can gather at any time of day or night, knowing they'll find quality coffee and a warm welcome waiting for them.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Photo Section -->
+    <section class="py-16 px-10 bg-cream">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl text-orange text-center mb-12">the cooper's coffee family</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative rounded-xl overflow-hidden shadow-lg h-[300px] bg-slate-200">
+                    <img src="./images/family_1.jpg" alt="Cooper's Coffee Co. family" class="h-full w-full object-cover">
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-lg h-[300px] bg-slate-200">
+                    <img src="./images/family_2.jpg" alt="Isaiah, Hannah, and Cooper" class="h-full w-full object-cover">
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-lg h-[300px] bg-slate-200">
+                    <img src="./images/family_3.jpg" alt="Working the coffee cart" class="h-full w-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-10 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl text-orange mb-6">ready to work together?</h2>
+            <p class="text-lg text-navy mb-8 leading-relaxed">
+                We'd love to bring quality coffee to your next event. Whether it's a corporate gathering, private celebration, or public pop-up, let's connect and make it happen.
+            </p>
+            <a href="/#contact" class="page-button">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-navy py-16 px-10 text-cream">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+            
+            <div class="w-full md:w-1/2">
+                <h3 class="text-orange text-2xl mb-4">cooper's coffee co.</h3>
+                <p class="opacity-80 text-sm">mobile espresso catering serving:<br>winston-salem • greensboro • high point<br>raleigh • durham • cary • charlotte • asheville</p>
+            </div>
+
+            <div class="flex items-center w-full h-full justify-center">
+                <img src="./images/ears.png" alt="Cooper's Ears" class="h-14 w-auto">
+            </div>
+
+            <div class="w-full md:w-1/2 md:text-right">
+                <h3 class="text-xl text-cream mb-4">follow the journey</h3>
+                <div class="flex md:justify-end space-x-6">
+                    <a href="https://www.instagram.com/cooperscoffeenc" class="hover:text-orange transition opacity-80 text-sm">instagram</a>
+                    <a href="#" class="hover:text-orange transition opacity-80 text-sm">facebook</a>
+                </div>
+                <p class="mt-4 text-orange text-sm opacity-90">coopscoffeeco@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="mt-16 pt-8 border-t border-cream/10 uppercase text-center">
+            <p class="text-[10px] opacity-50 tracking-[0.2em]">
+                © 2026 cooper's coffee co. | winston-salem, nc
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
