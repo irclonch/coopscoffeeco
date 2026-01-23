@@ -44,6 +44,21 @@ body {
     background-color: #FFF1E0;
 }
 
+.text-cream-75 {
+    color: #FFF1E0;
+    opacity: 0.75;
+}
+
+.text-cream-70 {
+    color: #fff1e0;
+    opacity: 0.70;
+}
+
+.text-cream-50 {
+    color: #FFF1E0;
+    opacity: 0.50;
+}
+
 /* Color utility classes */
 .bg-navy { background-color: var(--navy); }
 .bg-orange { background-color: var(--orange); }
@@ -63,6 +78,10 @@ header.relative {
 
 .bg-navy-overlay {
     background-color: rgba(20, 46, 61, 0.4);
+}
+
+.bg-cream-overlay {
+    background-color: rgba(255, 241, 224, 0.4);
 }
 
 .hero-title {
