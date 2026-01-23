@@ -20,18 +20,15 @@
         "addressRegion": "NC",
         "addressCountry": "US"
       },
-      "url": "https://coopscoffeco.com",
+      "url": "https://cooperscoffeenc.com",
       "image": "https://raw.githubusercontent.com/irclonch/coopscoffeeco/main/images/logo.png",
-      "description": "Premium mobile coffee and espresso catering for weddings and corporate events across North Carolina.",
+      "description": "Meeting you where you are with coffee that matters.",
       "areaServed": [
         "Winston-Salem, NC",
-        "Charlotte, NC",
-        "Raleigh, NC",
         "Greensboro, NC",
-        "Cary, NC",
-        "Wilmington, NC",
         "High Point, NC",
-        "Durham, NC"
+        "Clemmons, NC",
+        "Piedmont Triad"
       ],
       "priceRange": "$$"
     }
@@ -44,12 +41,54 @@
             <img src="./images/logo.png" alt="Cooper's Coffee Co. Logo" class="h-auto w-40">
         </a>
         
+        <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-10 uppercase tracking-widest text-xs font-bold text-navy">
+            <a href="/about" class="nav-link">About</a>
             <a href="#services" class="nav-link">The Service</a>
             <a href="#menu" class="nav-link">Menu</a>
             <a href="#contact" class="nav-button">Book the Cart</a>
         </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="hamburger" class="md:hidden flex flex-col space-y-1.5 z-50">
+            <span class="block w-7 h-0.5 bg-navy"></span>
+            <span class="block w-7 h-0.5 bg-navy"></span>
+            <span class="block w-7 h-0.5 bg-navy"></span>
+        </button>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-navy z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#services" class="mobile-menu-link text-cream text-2xl uppercase tracking-widest">The Service</a>
+            <a href="#menu" class="mobile-menu-link text-cream text-2xl uppercase tracking-widest">Menu</a>
+            <a href="#contact" class="mobile-menu-link text-orange text-2xl uppercase tracking-widest font-bold">Book the Cart</a>
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+        });
+
+        // Close menu when clicking a link
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+
+        // Close menu when clicking outside
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('translate-x-full');
+            }
+        });
+    </script>
 
     <header class="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <img src="./images/hero.jpg" 
@@ -61,7 +100,7 @@
         <div class="relative z-20 text-center px-10">
             <h1 class="text-white hero-title">craft coffee,<br>wherever you are.</h1>
             <p class="text-cream mt-4 max-w-xl mx-auto">
-                premium mobile espresso catering for events across North Carolina.
+                meeting you where you are with coffee that matters
             </p>
             <a href="#contact" class="page-button">
                 get a quote
@@ -91,10 +130,10 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-10 max-w-7xl mx-auto bg-white">
-        <div class="text-center mb-16">
+    <section id="services" class="py-20 px-10 max-w-7xl mx-auto bg-navy">
+        <div class="mb-16">
             <h2 class="text-4xl text-orange mb-6">what we offer</h2>
-            <p class="text-lg text-navy max-w-3xl mx-auto leading-relaxed">
+            <p class="text-lg text-cream mx-auto leading-relaxed">
                 From corporate events to private gatherings and public pop-ups, we bring the café experience directly to you. With our professional setup, commercial-grade equipment, and high-quality beans, we're ready to serve exceptional coffee at any event across North Carolina.
             </p>
         </div>
@@ -128,28 +167,29 @@
             </div>
 
             <!-- Private Premium -->
-            <div class="bg-navy rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div class="bg-orange rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div class="text-center mb-6">
-                    <h3 class="text-2xl text-orange mb-3">private premium</h3>
-                    <div class="w-16 h-1 bg-orange mx-auto"></div>
+                    <h3 class="text-2xl text-cream mb-3">private premium</h3>
+                    <div class="w-16 h-1 bg-cream mx-auto"></div>
                 </div>
                 <ul class="space-y-3 text-cream mb-6">
                     <li class="flex items-start">
-                        <span class="text-orange mr-2">•</span>
+                        <span class="text-cream mr-2">•</span>
                         <span>Up to 4 hours of service</span>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-orange mr-2">•</span>
+                        <span class="text-cream mr-2">•</span>
                         <span>Premium syrups & alternative milks</span>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-orange mr-2">•</span>
+                        <span class="text-cream mr-2">•</span>
                         <span>Cold brew available</span>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-orange mr-2">•</span>
+                        <span class="text-cream mr-2">•</span>
                         <span>Ideal for all-day events</span>
                     </li>
+                    <br>
                 </ul>
                 <p class="text-sm text-cream italic">Starting at $10 per guest</p>
             </div>
@@ -157,7 +197,7 @@
             <!-- Public Pop-Up -->
             <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div class="text-center mb-6">
-                    <h3 class="text-2xl text-navy mb-3">public pop-up</h3>
+                    <h3 class="text-2xl text-navy mb-3">public<br>pop-up</h3>
                     <div class="w-16 h-1 bg-orange mx-auto"></div>
                 </div>
                 <ul class="space-y-3 text-navy mb-6">
@@ -178,6 +218,7 @@
                         <span>Great for open houses & fairs</span>
                     </li>
                 </ul>
+                <br>
                 <p class="text-sm text-slate-600 italic">$200 base fee + sales minimum</p>
             </div>
         </div>
@@ -193,11 +234,11 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-20 px-10 bg-cream">
+    <section id="menu" class="py-20 px-10 bg-white">
         <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
+        <div class="mb-16">
             <h2 class="text-4xl text-orange mb-6">our menu</h2>
-            <p class="text-lg text-navy max-w-3xl mx-auto leading-relaxed">
+            <p class="text-lg text-navy mx-auto leading-relaxed">
                 Crafted with care using premium beans and the finest ingredients. All drinks can be customized to your preference.
             </p>
         </div>
@@ -324,18 +365,18 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-10 bg-navy">
+    <section id="contact" class="py-20 px-10 bg-cream">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="mb-16">
                 <h2 class="text-4xl text-orange mb-6">let's connect</h2>
-                <p class="text-lg text-orange max-w-3xl mx-auto leading-relaxed">
+                <p class="text-lg text-navy mx-auto leading-relaxed">
                     Ready to bring exceptional coffee to your next event? Fill out the form below and we'll get back to you within 24 hours.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
                 <!-- Contact Form -->
-                <div class="bg-cream rounded-xl p-8 shadow-lg">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
                     <form action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
                         <div class="space-y-4">
                             <!-- Name -->
@@ -415,19 +456,19 @@
 
                 <!-- Contact Info -->
                 <div class="space-y-8">
-                    <div class="bg-white rounded-xl p-8 text-cream">
-                        <h3 class="text-2xl text-navy mb-6">get in touch</h3>
+                    <div class="bg-navy rounded-xl p-8 text-cream">
+                        <h3 class="text-2xl text-orange mb-6">get in touch</h3>
                         <div class="space-y-6">
                             <div>
-                                <p class="text-xs uppercase tracking-wider text-orange mb-2">Email</p>
-                                <a href="mailto:coopscoffeeco@gmail.com" class="text-navy text-base hover:text-orange transition block">
+                                <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Email</p>
+                                <a href="mailto:coopscoffeeco@gmail.com" class="text-cream text-base hover:text-orange transition block">
                                     coopscoffeeco@gmail.com
                                 </a>
                             </div>
                             <div>
-                                <p class="text-xs uppercase tracking-wider text-orange mb-2">Service Area</p>
-                                <p class="text-navy text-base mb-2">All of North Carolina</p>
-                                <p class="text-sm text-navy">Including Winston-Salem, Charlotte, Raleigh, Durham, Greensboro, and more</p>
+                                <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Service Area</p>
+                                <p class="text-cream text-base mb-2">All of North Carolina</p>
+                                <p class="text-sm opacity-70">Including Winston-Salem, Charlotte, Raleigh, Durham, Greensboro, and more</p>
                             </div>
                         </div>
                     </div>
@@ -447,10 +488,6 @@
                                class="block text-orange hover:text-navy transition font-bold">
                                 @cooperscoffeenc on Instagram
                             </a>
-                            <a href="https://www.tiktok.com/@cooperscoffeenc" 
-                               class="block text-orange hover:text-navy transition font-bold">
-                                @cooperscoffeenc on TikTok
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -458,12 +495,16 @@
         </div>
     </section>
 
-    <footer class="bg-navy py-16 px-10 text-cream">
+    <footer class="bg-navy py-10 px-10 text-cream">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
             
             <div class="w-full md:w-1/2">
                 <h3 class="text-orange text-2xl mb-4">cooper's coffee co.</h3>
-                <p class="opacity-80 text-sm">premium mobile espresso catering serving:<br>winston-salem • greensboro • high point<br>raleigh • durham • cary • charlotte • asheville</p>
+                <p class="opacity-80 text-sm">mobile espresso catering serving:<br>winston-salem • greensboro • high point</p>
+            </div>
+
+            <div class="flex items-center w-full h-full justify-center">
+                <img src="./images/ears.png" alt="Cooper's Ears" class="h-14 w-auto">
             </div>
 
             <div class="w-full md:w-1/2 md:text-right">
@@ -476,8 +517,8 @@
             </div>
         </div>
 
-        <div class="mt-16 pt-8 border-t border-cream/10 text-center">
-            <p class="text-[10px] opacity-50 uppercase tracking-[0.2em]">
+        <div class="mt-16 pt-8 border-t border-cream/10 uppercase text-center">
+            <p class="text-[10px] opacity-50 tracking-[0.2em]">
                 © 2026 cooper's coffee co. | winston-salem, nc
             </p>
         </div>
