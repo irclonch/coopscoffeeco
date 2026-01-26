@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooper's Coffee Co. | NC Coffee Cart | Mobile Coffee Catering</title>
-    <meta name="description" content="Premium mobile espresso catering for weddings and events in Winston-Salem, Charlotte, and Raleigh. Elevate your event with Cooper's Coffee Co.">
+    <title>Raleigh Coffee Catering | Cooper's Coffee Co.</title>
+    <meta name="description" content="Premium mobile espresso catering in Raleigh, NC. Quality coffee for corporate events, private gatherings, and public pop-ups. Serving the Triangle area.">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="./images/favicon.png">
@@ -16,20 +16,13 @@
       "name": "Cooper's Coffee Co.",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Winston-Salem",
+        "addressLocality": "Raleigh",
         "addressRegion": "NC",
         "addressCountry": "US"
       },
       "url": "https://cooperscoffeenc.com",
-      "image": "https://raw.githubusercontent.com/irclonch/coopscoffeeco/main/images/logo.png",
-      "description": "Meeting you where you are with coffee that matters.",
-      "areaServed": [
-        "Winston-Salem, NC",
-        "Greensboro, NC",
-        "High Point, NC",
-        "Clemmons, NC",
-        "Piedmont Triad"
-      ],
+      "description": "Premium mobile espresso catering serving Raleigh and the Triangle area.",
+      "areaServed": "Raleigh, NC",
       "priceRange": "$$"
     }
     </script>
@@ -44,8 +37,8 @@
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-10 uppercase tracking-widest text-xs font-bold text-navy">
             <a href="/about.html" class="nav-link">The Story</a>
-            <a href="#services" class="nav-link">The Services</a>
-            <a href="#menu" class="nav-link">The Menu</a>
+            <a href="/#services" class="nav-link">The Services</a>
+            <a href="/#menu" class="nav-link">The Menu</a>
             <a href="#contact" class="nav-button">The Cart</a>
         </div>
 
@@ -62,8 +55,8 @@
         <div class="flex flex-col items-center justify-center h-full space-y-8">
             <a href="/index.html" class="mobile-menu-link text-cream text-2xl uppercase tracking-widest">Home</a>
             <a href="/about.html" class="mobile-menu-link text-cream text-2xl uppercase tracking-widest">The Story</a>
-            <a href="#services" class="mobile-menu-link text-cream text-2xl uppercase tracking-widest">The Services</a>
-            <a href="#menu" class="mobile-menu-link text-cream text-2xl uppercase tracking-widest">The Menu</a>
+            <a href="/#services" class="mobile-menu-link text-cream text-2xl uppercase tracking-widest">The Services</a>
+            <a href="/#menu" class="mobile-menu-link text-cream text-2xl uppercase tracking-widest">The Menu</a>
             <a href="#contact" class="mobile-menu-link text-orange text-2xl uppercase tracking-widest font-bold">The Cart</a>
         </div>
     </div>
@@ -77,14 +70,12 @@
             mobileMenu.classList.toggle('translate-x-full');
         });
 
-        // Close menu when clicking a link
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('translate-x-full');
             });
         });
 
-        // Close menu when clicking outside
         mobileMenu.addEventListener('click', (e) => {
             if (e.target === mobileMenu) {
                 mobileMenu.classList.add('translate-x-full');
@@ -94,13 +85,13 @@
 
     <header class="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <img src="./images/hero.jpg" 
-             alt="Cooper's Coffee Co. mobile espresso bar catering an event in North Carolina" 
+             alt="Cooper's Coffee Co. mobile espresso catering in Raleigh, NC" 
              class="absolute z-0 w-full h-full object-cover">
         
         <div class="absolute z-10 w-full h-full bg-navy-overlay"></div>
 
         <div class="relative z-20 text-center px-10">
-            <h1 class="text-white hero-title">craft coffee,<br>wherever you are.</h1>
+            <h1 class="text-white hero-title">raleigh<br>coffee catering</h1>
             <p class="text-cream mt-4 max-w-xl mx-auto">
                 meeting you where you are with coffee that matters
             </p>
@@ -132,28 +123,16 @@
     </section>
 
     <!-- The Services Section -->
-    <section id="services" class="py-20 px-10 max-w-7xl mx-auto bg-navy">
+    <section id="services" class="py-20 px-10 bg-navy">
+        <div class="max-w-7xl mx-auto">
         <div class="mb-16">
             <h2 class="text-4xl text-orange mb-6">the services</h2>
-            <p class="text-lg text-cream mx-auto leading-relaxed">
-                From corporate events to private gatherings and public pop-ups, we bring the café experience directly to you. With our professional setup, commercial-grade equipment, and high-quality beans, we're ready to serve exceptional coffee at any event across North Carolina.
+            <p class="text-lg text-cream leading-relaxed">
+                From corporate events to private gatherings and public pop-ups, we bring the café experience directly to you. With our professional setup, commercial-grade equipment, and high-quality beans, we're ready to serve exceptional coffee at any event in Raleigh.
             </p>
-        </div>
-
-        <!-- Add this after the intro text in your Services section -->
-        <div class="mt-8 text-center">
-            <p class="text-cream mb-4 text-base">Explore our services by location:</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="/winston-salem-coffee-catering.html" class="bg-orange text-white px-6 py-3 rounded-full font-bold uppercase text-sm hover:scale-105 transition-transform">
-            Winston-Salem
-                </a>
-                <a href="/greensboro-coffee-catering.html" class="bg-orange text-white px-6 py-3 rounded-full font-bold uppercase text-sm hover:scale-105 transition-transform">
-            Greensboro
-                </a>
-                <a href="/raleigh-coffee-catering.html" class="bg-orange text-white px-6 py-3 rounded-full font-bold uppercase text-sm hover:scale-105 transition-transform">
-            Raleigh
-                </a>
-            </div>
+            <p class="text-orange text-sm mt-4 font-bold">
+                $1.50/mile travel fee outside of 40 miles
+            </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
@@ -207,8 +186,8 @@
                         <span class="text-cream mr-2">•</span>
                         <span>Ideal for all-day events</span>
                     </li>
-                    <br>
                 </ul>
+                <br>
                 <p class="text-sm text-cream italic">Starting at $10 per guest</p>
             </div>
 
@@ -243,11 +222,12 @@
 
         <div class="mt-12 text-center">
             <p class="text-cream mb-6 max-w-2xl mx-auto">
-                All packages are customizable with add-ons like extended hours, premium syrups, alternative milks, and cold brew. Travel fees apply outside our service area.
+                All packages are customizable with add-ons like extended hours, premium syrups, alternative milks, and cold brew.
             </p>
             <a href="#contact" class="page-button">
                 Request a Custom Quote
             </a>
+        </div>
         </div>
     </section>
 
@@ -256,7 +236,7 @@
         <div class="max-w-7xl mx-auto">
         <div class="mb-16">
             <h2 class="text-4xl text-orange mb-6">the menu</h2>
-            <p class="text-lg text-navy mx-auto leading-relaxed">
+            <p class="text-lg text-navy leading-relaxed">
                 Crafted with care using premium beans and the finest ingredients. All drinks can be customized to your preference.
             </p>
         </div>
@@ -360,7 +340,7 @@
                             <span class="text-orange">$1.00</span>
                         </li>
                         <li class="flex justify-between">
-                            <span>Premium Syrupy</span>
+                            <span>Premium Syrup</span>
                             <span class="text-orange">$0.75</span>
                         </li>
                         <li class="flex justify-between">
@@ -380,6 +360,7 @@
             </div>
         </div>
         </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
@@ -388,7 +369,7 @@
         <div class="mb-16 text-center">
             <h2 class="text-4xl text-orange mb-6">let's connect</h2>
             <p class="text-lg text-cream max-w-2xl mx-auto leading-relaxed">
-                Ready to bring exceptional coffee to your next event? Fill out the form below and we'll get back to you within 24 hours.
+                Ready to bring exceptional coffee to your next event in Raleigh? Fill out the form below and we'll get back to you within 24 hours.
             </p>
         </div>
 
