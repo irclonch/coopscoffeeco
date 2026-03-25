@@ -18,53 +18,34 @@
 :root {
     --navy: #142E3d;
     --orange: #E49744;
-    --gray-green: #526C68;
-    --aqua: #72D1D6;
     --cream: #FFF1E0;
 }
 
-h1 { 
-    font-family: 'CaviarDreams_Bold', sans-serif; 
+h1 {
+    font-family: 'CaviarDreams_Bold', sans-serif;
     font-weight: bold;
     letter-spacing: 0.16em;
     color: var(--navy);
     text-transform: lowercase;
 }
 
-h2, h3 { 
-    font-family: 'CaviarDreams_Bold', sans-serif; 
+h2, h3 {
+    font-family: 'CaviarDreams_Bold', sans-serif;
     font-weight: normal;
     letter-spacing: 0.08em;
     color: var(--navy);
     text-transform: lowercase;
 }
 
-body { 
-    font-family: 'ProximaNova', sans-serif; 
+body {
+    font-family: 'ProximaNova', sans-serif;
     background-color: #FFF1E0;
-}
-
-.text-cream-75 {
-    color: #FFF1E0;
-    opacity: 0.75;
-}
-
-.text-cream-70 {
-    color: #fff1e0;
-    opacity: 0.70;
-}
-
-.text-cream-50 {
-    color: #FFF1E0;
-    opacity: 0.50;
 }
 
 /* Color utility classes */
 .bg-navy { background-color: var(--navy); }
 .bg-orange { background-color: var(--orange); }
-.bg-aqua { background-color: var(--aqua); }
 .bg-cream { background-color: var(--cream); }
-.bg-gray { background-color: var(--gray-green); }
 .text-navy { color: var(--navy); }
 .text-orange { color: var(--orange); }
 .text-cream { color: var(--cream); }
@@ -96,28 +77,7 @@ header.relative {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-/* Navigation links - change to orange on hover */
-.nav-link {
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--orange);
-}
-
-.nav-button {
-    background-color: var(--navy);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-    background-color: var(--orange);
-}
-
-/* Page buttons - enlarge on hover */
+/* Page buttons */
 .page-button {
     display: inline-block;
     background-color: var(--orange);
@@ -155,7 +115,7 @@ header.relative {
 /* Mobile responsive */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.5rem !important; 
+        font-size: 2.5rem !important;
         letter-spacing: 0.10em !important;
         margin-bottom: 1rem;
     }
