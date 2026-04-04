@@ -5,15 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooper's Coffee Co. | Mobile Coffee Catering | North Carolina</title>
     <meta name="description" content="Premium mobile espresso catering for corporate events, private gatherings, and pop-ups across North Carolina. Cooper's Coffee Co. — meeting you where you are.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cooperscoffeenc.com">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cooper's Coffee Co. | Mobile Coffee Catering | North Carolina">
+    <meta property="og:description" content="Premium mobile espresso catering for corporate events, private gatherings, and pop-ups across North Carolina. Cooper's Coffee Co. — meeting you where you are.">
+    <meta property="og:url" content="https://cooperscoffeenc.com">
+    <meta property="og:image" content="https://cooperscoffeenc.com/images/hero.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Cooper's Coffee Co.">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cooper's Coffee Co. | Mobile Coffee Catering | North Carolina">
+    <meta name="twitter:description" content="Premium mobile espresso catering for corporate events, private gatherings, and pop-ups across North Carolina.">
+    <meta name="twitter:image" content="https://cooperscoffeenc.com/images/hero.jpg">
+
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-navy: #142E3D;
+            --color-orange: #E49744;
+            --color-cream: #FFF1E0;
+        }
+    </style>
     <link rel="icon" type="image/png" href="./images/favicon.png">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "CateringService",
+      "@id": "https://cooperscoffeenc.com/#business",
       "name": "Cooper's Coffee Co.",
+      "telephone": "+13366874607",
+      "email": "isaiah@cooperscoffeenc.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Winston-Salem",
@@ -21,344 +51,370 @@
         "addressCountry": "US"
       },
       "url": "https://cooperscoffeenc.com",
-      "image": "https://raw.githubusercontent.com/irclonch/coopscoffeeco/main/images/logo.png",
-      "description": "Meeting you where you are with coffee that matters.",
-      "areaServed": "North Carolina",
-      "priceRange": "$$"
+      "image": "https://cooperscoffeenc.com/images/hero.jpg",
+      "logo": "https://raw.githubusercontent.com/irclonch/coopscoffeeco/main/images/logo.png",
+      "description": "Premium mobile espresso catering for corporate events, private gatherings, and pop-ups across North Carolina.",
+      "areaServed": {
+        "@type": "State",
+        "name": "North Carolina"
+      },
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.instagram.com/cooperscoffeenc",
+        "https://www.tiktok.com/@cooperscoffeenc"
+      ]
     }
     </script>
 </head>
 <body class="text-slate-900">
 
-    <!-- Logo Bar -->
-    <nav class="flex justify-center items-center px-10 py-5 bg-cream border-b border-slate-100">
-        <a href="/"><img src="./images/logo.png" alt="Cooper's Coffee Co. Logo" class="h-auto w-40"></a>
-    </nav>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-orange focus:text-white focus:rounded-full">Skip to content</a>
 
-    <!-- Hero -->
-    <header class="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <img src="./images/hero.jpg"
-             alt="Cooper's Coffee Co. mobile espresso bar catering an event in North Carolina"
-             class="absolute z-0 w-full h-full object-cover">
-        <div class="absolute z-10 w-full h-full bg-navy-overlay"></div>
-        <div class="relative z-20 text-center px-10">
-            <h1 class="text-white hero-title">craft coffee,<br>wherever you are.</h1>
-            <a href="#contact" class="page-button">get a quote</a>
-        </div>
+    <!-- Logo Bar / Navigation -->
+    <header role="banner" class="flex justify-between items-center px-10 py-5 bg-cream border-b border-slate-100">
+        <a href="/" aria-label="Cooper's Coffee Co. — Home">
+            <img src="./images/logo.png" alt="Cooper's Coffee Co." class="h-auto w-40">
+        </a>
+        <nav aria-label="Primary navigation">
+            <ul class="flex gap-8 text-sm font-bold uppercase tracking-widest text-navy list-none">
+                <li><a href="#about" class="hover:text-orange transition-colors">About</a></li>
+                <li><a href="#services" class="hover:text-orange transition-colors">Services</a></li>
+                <li><a href="#menu" class="hover:text-orange transition-colors">Menu</a></li>
+                <li><a href="#contact" class="hover:text-orange transition-colors">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- The Owner — cream -->
-    <section id="about" class="py-16 px-10 bg-cream">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6">
-                <h2 class="text-4xl text-orange">the owner</h2>
-                <p class="text-lg text-navy leading-relaxed">
-                    Cooper is a blue heeler who reminds us daily that showing up matters so we named our business after him. I'm Isaiah Clonch, and alongside my wife Hannah, we started serving coffee to friends and family from our home before turning that love into something bigger. Our mission has never changed: meet you where you are and make something worth savoring — whether that's neighborhood get-together, a company event, or just a Tuesday morning.
-                </p>
-                <a href="/about.html" class="page-button-small">Learn More</a>
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section aria-label="Hero" class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+            <img src="./images/hero.jpg"
+                 alt="Cooper's Coffee Co. mobile espresso bar catering an event in North Carolina"
+                 width="1920"
+                 height="1080"
+                 class="absolute z-0 w-full h-full object-cover">
+            <div class="absolute z-10 w-full h-full bg-navy-overlay" aria-hidden="true"></div>
+            <div class="relative z-20 text-center px-10">
+                <h1 class="text-white hero-title">craft coffee,<br>wherever you are.</h1>
+                <a href="#contact" class="page-button">get a quote</a>
             </div>
-            <div class="relative">
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] bg-slate-200 flex items-center justify-center">
-                    <img src="./images/HanIsaiahCoop.JPG" alt="Hannah and Isaiah Clonch" class="h-full w-full object-cover">
+        </section>
+
+        <!-- The Owner — cream -->
+        <section id="about" class="py-16 px-10 bg-cream">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl text-orange">the owner</h2>
+                    <p class="text-lg text-navy leading-relaxed">
+                        Cooper is a blue heeler who reminds us daily that showing up matters so we named our business after him. I'm Isaiah Clonch, and alongside my wife Hannah, we started serving coffee to friends and family from our home before turning that love into something bigger. Our mission has never changed: meet you where you are and make something worth savoring — whether that's neighborhood get-together, a company event, or just a Tuesday morning.
+                    </p>
+                    <a href="/about.html" class="page-button-small">Learn More About Us</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Services — navy -->
-    <section id="services" class="py-20 px-10 bg-navy">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16">
-                <h2 class="text-4xl text-orange mb-6">the services</h2>
-                <p class="text-lg text-cream leading-relaxed">
-                    From corporate events to private gatherings and public pop-ups, we bring the complete café experience directly to you. A professional setup, commercial-grade equipment, and high-quality beans means we're ready for any event across North Carolina.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Private Standard -->
-                <div class="bg-cream rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="text-center mb-6">
-                        <h3 class="text-2xl text-navy mb-3">hosted<br>standard</h3>
-                        <div class="w-16 h-1 bg-orange mx-auto"></div>
-                    </div>
-                    <ul class="space-y-3 text-navy mb-6">
-						<li class="flex items-start"><span class="text-orange mr-2">•</span><span>Build your menu</span></li>
-                        <li class="flex items-start"><span class="text-orange mr-2">•</span><span>Espresso based drinks</span></li>
-                        <li class="flex items-start"><span class="text-orange mr-2">•</span><span>Drip coffee</span></li>
-                        <li class="flex items-start"><span class="text-orange mr-2">•</span><span>Dairy milk</span></li>
-                        <li class="flex items-start"><span class="text-orange mr-2">•</span><span>Classic syrups</span></li>
-                    </ul>
-                    <p class="text-sm text-slate-600 italic">Starting at $295 for 2 hours of service<br>You pay for your guests</p>
-                </div>
-
-                <!-- Private Premium -->
-                <div class="bg-orange rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="text-center mb-6">
-                        <h3 class="text-2xl text-cream mb-3">hosted<br>premium</h3>
-                        <div class="w-16 h-1 bg-cream mx-auto"></div>
-                    </div>
-                    <ul class="space-y-3 text-cream mb-6">
-                        <li class="flex items-start"><span class="text-cream mr-2">•</span><span>Includes standard services</span></li>
-						<li class="flex items-start"><span class="text-cream mr-2">•</span><span>Build your extended menu</span></li>
-                        <li class="flex items-start"><span class="text-cream mr-2">•</span><span>Alternative milks</span></li>
-                        <li class="flex items-start"><span class="text-cream mr-2">•</span><span>Premium sauces and syrups</span></li>
-                        <li class="flex items-start"><span class="text-cream mr-2">•</span><span>Matcha, chai, and other refreshers</span></li>
-                    </ul>
-                    <p class="text-sm text-cream italic">Starting at $450 for 3 hours of service<br>You pay for your guests</p>
-                </div>
-
-                <!-- Public Pop-Up -->
-                <div class="bg-cream rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                    <div class="text-center mb-6">
-                        <h3 class="text-2xl text-navy mb-3">vendor<br>pop-up</h3>
-                        <div class="w-16 h-1 bg-orange mx-auto"></div>
-                    </div>
-                    <ul class="space-y-3 text-navy mb-6">
-                        <li class="flex items-start"><span class="text-orange mr-2">•</span><span>2 hours of service</span></li>
-                        <li class="flex items-start"><span class="text-orange mr-2">•</span><span>Full menu available</span></li>
-                        <li class="flex items-start"><span class="text-orange mr-2">•</span><span>Classic & Premium syrups</span></li>
-						<li class="flex items-start"><span class="text-orange mr-2">•</span><span>Dairy & Alternative milks</span></li>
-                        <li class="flex items-start"><span class="text-orange mr-2">•</span><span>Great for open houses & fairs</span></li>
-                    </ul>
-                    <p class="text-sm text-slate-600 italic">$200 base fee + sales minimum</p>
-                    <p class="text-sm text-slate-600 italic">Guests pay for their drinks individually</p>
-                </div>
-            </div>
-
-            <div class="mt-12 text-center">
-                <p class="text-cream mb-6 max-w-2xl mx-auto">
-                    All packages are customizable with add-ons like extended hours, premium syrups, alternative milks, and cold brew. Based in Winston-Salem – travel fees may apply beyond 40 miles.
-                </p>
-                <a href="#contact" class="page-button">Request a Custom Quote</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Reach — cream -->
-    <section id="service-area" class="py-16 px-10 bg-cream">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl text-orange mb-6">the reach</h2>
-            <p class="text-lg text-navy leading-relaxed mb-10">
-                Based in Winston-Salem, we travel across North Carolina to bring exceptional coffee to your event. Don't see your city? Reach out anyway! We'd love to connect.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold uppercase tracking-widest text-navy">
-                <span class="bg-white px-5 py-3 rounded-full shadow">Winston-Salem</span>
-                <span class="bg-white px-5 py-3 rounded-full shadow">Greensboro</span>
-                <span class="bg-white px-5 py-3 rounded-full shadow">High Point</span>
-                <span class="bg-white px-5 py-3 rounded-full shadow">Raleigh</span>
-                <span class="bg-white px-5 py-3 rounded-full shadow">Charlotte</span>
-                <span class="bg-white px-5 py-3 rounded-full shadow">Durham</span>
-                <span class="bg-white px-5 py-3 rounded-full shadow">& Beyond</span>
-            </div>
-            <p class="text-sm text-navy opacity-60 mt-8">Travel fees may apply outside of 40 miles from Winston-Salem.</p>
-        </div>
-    </section>
-
-    <!-- The Menu — navy -->
-    <section id="menu" class="py-10 px-10 bg-navy">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-12">
-                <h2 class="text-4xl text-orange mb-6">the menu</h2>
-                <p class="text-lg text-cream leading-relaxed">
-                    Crafted with care using premium beans and the finest ingredients. All drinks can be customized to your preference.
-                </p>
-            </div>
-
-            <!-- Espresso Base -->
-            <div class="max-w-5xl mx-auto mb-8">
-                <div class="bg-cream rounded-xl px-8 py-5 flex justify-between items-center">
-                    <div>
-                        <p class="font-bold text-navy">espresso</p>
-                        <p class="text-sm text-navy opacity-60">single or double shot</p>
-                    </div>
-                    <p class="text-orange font-bold">$3.00 / $3.50</p>
-                </div>
-            </div>
-
-            <!-- Hot & Cold Cards -->
-            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <!-- Hot Drinks -->
-                <div class="bg-cream rounded-xl p-8 shadow-lg">
-                    <h3 class="text-2xl text-orange mb-6 text-center">hot drinks</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">americano</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
-                            <p class="text-orange font-bold">$4.00 / $4.50</p>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">latte</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
-                            <p class="text-orange font-bold">$5.00 / $5.50</p>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">cappuccino</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
-                            <p class="text-orange font-bold">$5.00 / $5.50</p>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">mocha</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
-                            <p class="text-orange font-bold">$5.50 / $6.00</p>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">chai latte</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
-                            <p class="text-orange font-bold">$5.00 / $5.50</p>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">matcha latte</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
-                            <p class="text-orange font-bold">$5.50 / $6.00</p>
-                        </div>
-                        <div class="flex justify-between items-center pb-3">
-                            <div><p class="font-bold text-navy">hot chocolate</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
-                            <p class="text-orange font-bold">$4.00 / $4.50</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cold Drinks -->
-                <div class="bg-cream rounded-xl p-8 shadow-lg">
-                    <h3 class="text-2xl text-orange mb-6 text-center">cold drinks</h3>
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">iced americano</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
-                            <p class="text-orange font-bold">$4.50 / $5.00</p>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">iced latte</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
-                            <p class="text-orange font-bold">$5.50 / $6.00</p>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">iced mocha</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
-                            <p class="text-orange font-bold">$6.00 / $6.50</p>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">iced chai latte</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
-                            <p class="text-orange font-bold">$5.50 / $6.00</p>
-                        </div>
-                        <div class="flex justify-between items-center border-b border-navy pb-3">
-                            <div><p class="font-bold text-navy">iced matcha latte</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
-                            <p class="text-orange font-bold">$6.00 / $6.50</p>
-                        </div>
-                        <div class="flex justify-between items-center pb-3">
-                            <div><p class="font-bold text-navy">cold brew</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
-                            <p class="text-orange font-bold">$5.00 / $5.50</p>
-                        </div>
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] bg-slate-200 flex items-center justify-center">
+                        <img src="./images/HanIsaiahCoop.JPG" alt="Hannah and Isaiah Clonch with Cooper" class="h-full w-full object-cover" width="800" height="400" loading="lazy">
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Add-ons -->
-            <div class="max-w-5xl mx-auto mt-8 text-center">
-                <p class="text-cream text-sm opacity-80">
-                    <span class="font-bold text-orange">add-ons:</span> Extra Shot $1.00 &nbsp;•&nbsp; Premium Syrup $0.75 &nbsp;•&nbsp; Alternative Milk $1.00
-                </p>
-                <p class="text-cream text-sm opacity-80 mt-2">
-                    <span class="font-bold text-orange">options:</span> Vanilla, Caramel, Hazelnut &nbsp;•&nbsp; Oat, Almond, Coconut Milk &nbsp;•&nbsp; Decaf on request
-                </p>
+        <!-- The Services — navy -->
+        <section id="services" class="py-20 px-10 bg-navy">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="text-4xl text-orange mb-6">the services</h2>
+                    <p class="text-lg text-cream leading-relaxed">
+                        From corporate events to private gatherings and public pop-ups, we bring the complete café experience directly to you. A professional setup, commercial-grade equipment, and high-quality beans means we're ready for any event across North Carolina.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Hosted Standard -->
+                    <div class="bg-cream rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl text-navy mb-3">hosted<br>standard</h3>
+                            <div class="w-16 h-1 bg-orange mx-auto"></div>
+                        </div>
+                        <ul class="space-y-3 text-navy mb-6" role="list">
+                            <li class="flex items-start"><span class="text-orange mr-2" aria-hidden="true">•</span><span>Build your menu</span></li>
+                            <li class="flex items-start"><span class="text-orange mr-2" aria-hidden="true">•</span><span>Espresso based drinks</span></li>
+                            <li class="flex items-start"><span class="text-orange mr-2" aria-hidden="true">•</span><span>Drip coffee</span></li>
+                            <li class="flex items-start"><span class="text-orange mr-2" aria-hidden="true">•</span><span>Dairy milk</span></li>
+                            <li class="flex items-start"><span class="text-orange mr-2" aria-hidden="true">•</span><span>Classic syrups</span></li>
+                        </ul>
+                        <p class="text-sm text-slate-600 italic">Starting at $295 for 2 hours of service<br>You pay for your guests</p>
+                    </div>
+
+                    <!-- Hosted Premium -->
+                    <div class="bg-orange rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl text-cream mb-3">hosted<br>premium</h3>
+                            <div class="w-16 h-1 bg-cream mx-auto"></div>
+                        </div>
+                        <ul class="space-y-3 text-cream mb-6" role="list">
+                            <li class="flex items-start"><span class="text-cream mr-2" aria-hidden="true">•</span><span>Includes standard services</span></li>
+                            <li class="flex items-start"><span class="text-cream mr-2" aria-hidden="true">•</span><span>Build your extended menu</span></li>
+                            <li class="flex items-start"><span class="text-cream mr-2" aria-hidden="true">•</span><span>Alternative milks</span></li>
+                            <li class="flex items-start"><span class="text-cream mr-2" aria-hidden="true">•</span><span>Premium sauces and syrups</span></li>
+                            <li class="flex items-start"><span class="text-cream mr-2" aria-hidden="true">•</span><span>Matcha, chai, and other refreshers</span></li>
+                        </ul>
+                        <p class="text-sm text-cream italic">Starting at $450 for 3 hours of service<br>You pay for your guests</p>
+                    </div>
+
+                    <!-- Vendor Pop-Up -->
+                    <div class="bg-cream rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl text-navy mb-3">vendor<br>pop-up</h3>
+                            <div class="w-16 h-1 bg-orange mx-auto"></div>
+                        </div>
+                        <ul class="space-y-3 text-navy mb-6" role="list">
+                            <li class="flex items-start"><span class="text-orange mr-2" aria-hidden="true">•</span><span>2 hours of service</span></li>
+                            <li class="flex items-start"><span class="text-orange mr-2" aria-hidden="true">•</span><span>Full menu available</span></li>
+                            <li class="flex items-start"><span class="text-orange mr-2" aria-hidden="true">•</span><span>Classic & Premium syrups</span></li>
+                            <li class="flex items-start"><span class="text-orange mr-2" aria-hidden="true">•</span><span>Dairy & Alternative milks</span></li>
+                            <li class="flex items-start"><span class="text-orange mr-2" aria-hidden="true">•</span><span>Great for open houses & fairs</span></li>
+                        </ul>
+                        <p class="text-sm text-slate-600 italic">$200 base fee + sales minimum</p>
+                        <p class="text-sm text-slate-600 italic">Guests pay for their drinks individually</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <p class="text-cream mb-6 max-w-2xl mx-auto">
+                        All packages are customizable with add-ons like extended hours, premium syrups, alternative milks, and cold brew. Based in Winston-Salem – travel fees may apply beyond 40 miles.
+                    </p>
+                    <a href="#contact" class="page-button">Get a Quote</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Let's Connect — cream -->
-    <section id="contact" class="py-20 px-10 bg-cream">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-16">
-                <h2 class="text-4xl text-orange mb-6">let's connect</h2>
-                <p class="text-lg text-navy leading-relaxed">
-                    Ready to bring exceptional coffee to your next event? Fill out the form below and we'll get back to you within 24 hours.
+        <!-- The Reach — cream -->
+        <section id="service-area" class="py-16 px-10 bg-cream">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl text-orange mb-6">the reach</h2>
+                <p class="text-lg text-navy leading-relaxed mb-10">
+                    Based in Winston-Salem, we travel across North Carolina to bring exceptional coffee to your event. Don't see your city? Reach out anyway! We'd love to connect.
                 </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm font-bold uppercase tracking-widest text-navy">
+                    <span class="bg-white px-5 py-3 rounded-full shadow">Winston-Salem</span>
+                    <span class="bg-white px-5 py-3 rounded-full shadow">Greensboro</span>
+                    <span class="bg-white px-5 py-3 rounded-full shadow">Raleigh</span>
+                    <span class="bg-white px-5 py-3 rounded-full shadow">Durham</span>
+                    <span class="bg-white px-5 py-3 rounded-full shadow">Charlotte</span>
+                    <span class="bg-white px-5 py-3 rounded-full shadow">Hickory</span>
+                    <span class="bg-white px-5 py-3 rounded-full shadow">& Beyond</span>
+                </div>
+                <p class="text-sm text-navy opacity-60 mt-8">Travel fees may apply outside of 40 miles from Winston-Salem.</p>
             </div>
+        </section>
 
-            <!-- Contact Form -->
-            <div class="max-w-2xl mx-auto mb-12">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <form action="https://formspree.io/f/xbdpryod" method="POST">
+        <!-- The Menu — navy -->
+        <section id="menu" class="py-10 px-10 bg-navy">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-4xl text-orange mb-6">the menu</h2>
+                    <p class="text-lg text-cream leading-relaxed">
+                        Crafted with care using premium beans and the finest ingredients. All drinks can be customized to your preference.
+                    </p>
+                </div>
+
+                <!-- Espresso Base -->
+                <div class="max-w-5xl mx-auto mb-8">
+                    <div class="bg-cream rounded-xl px-8 py-5 flex justify-between items-center">
+                        <div>
+                            <p class="font-bold text-navy">espresso</p>
+                            <p class="text-sm text-navy opacity-60">single or double shot</p>
+                        </div>
+                        <p class="text-orange font-bold">$3.00 / $3.50</p>
+                    </div>
+                </div>
+
+                <!-- Hot & Cold Cards -->
+                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <!-- Hot Drinks -->
+                    <div class="bg-cream rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl text-orange mb-6 text-center">hot drinks</h3>
                         <div class="space-y-4">
-                            <div>
-                                <label for="name" class="block text-navy font-bold mb-2 text-sm">Name *</label>
-                                <input type="text" id="name" name="name" required
-                                       class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">americano</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
+                                <p class="text-orange font-bold">$4.00 / $4.50</p>
                             </div>
-                            <div>
-                                <label for="email" class="block text-navy font-bold mb-2 text-sm">Email *</label>
-                                <input type="email" id="email" name="email" required
-                                       class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">latte</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
+                                <p class="text-orange font-bold">$5.00 / $5.50</p>
                             </div>
-                            <div>
-                                <label for="phone" class="block text-navy font-bold mb-2 text-sm">Phone *</label>
-                                <input type="tel" id="phone" name="phone" required
-                                       class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">cappuccino</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
+                                <p class="text-orange font-bold">$5.00 / $5.50</p>
                             </div>
-                            <div>
-                                <label for="contact-method" class="block text-navy font-bold mb-2 text-sm">Preferred Contact Method *</label>
-                                <select id="contact-method" name="contact-method" required
-                                        class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
-                                    <option value="">Select one...</option>
-                                    <option value="email">Email</option>
-                                    <option value="phone">Phone Call</option>
-                                    <option value="text">Text Message</option>
-                                </select>
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">mocha</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
+                                <p class="text-orange font-bold">$5.50 / $6.00</p>
                             </div>
-                            <div>
-                                <label for="event-date" class="block text-navy font-bold mb-2 text-sm">Event Date</label>
-                                <input type="date" id="event-date" name="event-date"
-                                       class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">chai latte</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
+                                <p class="text-orange font-bold">$5.00 / $5.50</p>
                             </div>
-                            <div>
-                                <label for="event-type" class="block text-navy font-bold mb-2 text-sm">Event Type</label>
-                                <select id="event-type" name="event-type"
-                                        class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
-                                    <option value="">Select one...</option>
-                                    <option value="corporate">Corporate Event</option>
-                                    <option value="private">Private Gathering</option>
-                                    <option value="popup">Public Pop-Up</option>
-                                    <option value="other">Other</option>
-                                </select>
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">matcha latte</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
+                                <p class="text-orange font-bold">$5.50 / $6.00</p>
                             </div>
-                            <div>
-                                <label for="guests" class="block text-navy font-bold mb-2 text-sm">Number of Guests</label>
-                                <input type="number" id="guests" name="guests" min="1"
-                                       class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                            <div class="flex justify-between items-center pb-3">
+                                <div><p class="font-bold text-navy">hot chocolate</p><p class="text-sm text-navy opacity-60">12oz / 16oz</p></div>
+                                <p class="text-orange font-bold">$4.00 / $4.50</p>
                             </div>
-                            <div>
-                                <label for="message" class="block text-navy font-bold mb-2 text-sm">Additional Details</label>
-                                <textarea id="message" name="message" rows="4"
-                                          class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-orange text-white py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform">
-                                Send Request
-                            </button>
                         </div>
-                    </form>
+                    </div>
+
+                    <!-- Cold Drinks -->
+                    <div class="bg-cream rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl text-orange mb-6 text-center">cold drinks</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">iced americano</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
+                                <p class="text-orange font-bold">$4.50 / $5.00</p>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">iced latte</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
+                                <p class="text-orange font-bold">$5.50 / $6.00</p>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">iced mocha</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
+                                <p class="text-orange font-bold">$6.00 / $6.50</p>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">iced chai latte</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
+                                <p class="text-orange font-bold">$5.50 / $6.00</p>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-navy pb-3">
+                                <div><p class="font-bold text-navy">iced matcha latte</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
+                                <p class="text-orange font-bold">$6.00 / $6.50</p>
+                            </div>
+                            <div class="flex justify-between items-center pb-3">
+                                <div><p class="font-bold text-navy">cold brew</p><p class="text-sm text-navy opacity-60">16oz / 24oz</p></div>
+                                <p class="text-orange font-bold">$5.00 / $5.50</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add-ons -->
+                <div class="max-w-5xl mx-auto mt-8 text-center">
+                    <p class="text-cream text-sm opacity-80">
+                        <span class="font-bold text-orange">add-ons:</span> Extra Shot $1.00 &nbsp;•&nbsp; Premium Syrup $0.75 &nbsp;•&nbsp; Alternative Milk $1.00
+                    </p>
+                    <p class="text-cream text-sm opacity-80 mt-2">
+                        <span class="font-bold text-orange">options:</span> Vanilla, Caramel, Hazelnut &nbsp;•&nbsp; Oat, Almond, Coconut Milk &nbsp;•&nbsp; Decaf on request
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <!-- Contact Info -->
-            <div class="max-w-2xl mx-auto">
-                <div class="bg-navy rounded-xl p-8 text-cream">
-                    <h3 class="text-2xl text-cream mb-6 text-center">get in touch</h3>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Email</p>
-                            <a href="mailto:isaiah@cooperscoffeenc.com" class="text-cream text-base hover:text-orange transition block">
-                                isaiah@cooperscoffeenc.com
-                            </a>
+        <!-- Let's Connect — cream -->
+        <section id="contact" class="py-20 px-10 bg-cream">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="text-4xl text-orange mb-6">let's connect</h2>
+                    <p class="text-lg text-navy leading-relaxed">
+                        Ready to bring exceptional coffee to your next event? Fill out the form below and we'll get back to you within 24 hours.
+                    </p>
+                </div>
 
-                            <p class="text-xs uppercase tracking-wider opacity-70 mt-4 mb-2">Phone</p>
-                            <a href="tel:+13367937375" class="text-cream text-base hover:text-orange transition block">
-                                (336) 687-4607
-                            </a>
-                        </div>
-                        <div>
-                            <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Follow Along</p>
-                            <div class="space-y-1">
-                                <a href="https://www.instagram.com/cooperscoffeenc" class="block hover:text-orange transition">Instagram</a>
-                                <a href="https://www.tiktok.com/@cooperscoffeenc" class="block hover:text-orange transition">TikTok</a>
+                <!-- Contact Form -->
+                <div class="max-w-2xl mx-auto mb-12">
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <form action="https://formspree.io/f/xbdpryod" method="POST">
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-navy font-bold mb-2 text-sm">Name *</label>
+                                    <input type="text" id="name" name="name" required autocomplete="name"
+                                           class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-navy font-bold mb-2 text-sm">Email *</label>
+                                    <input type="email" id="email" name="email" required autocomplete="email"
+                                           class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-navy font-bold mb-2 text-sm">Phone *</label>
+                                    <input type="tel" id="phone" name="phone" required autocomplete="tel"
+                                           class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                                </div>
+                                <div>
+                                    <label for="contact-method" class="block text-navy font-bold mb-2 text-sm">Preferred Contact Method *</label>
+                                    <select id="contact-method" name="contact-method" required
+                                            class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                                        <option value="">Select one...</option>
+                                        <option value="email">Email</option>
+                                        <option value="phone">Phone Call</option>
+                                        <option value="text">Text Message</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="event-date" class="block text-navy font-bold mb-2 text-sm">Event Date</label>
+                                    <input type="date" id="event-date" name="event-date"
+                                           class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                                </div>
+                                <div>
+                                    <label for="event-type" class="block text-navy font-bold mb-2 text-sm">Event Type</label>
+                                    <select id="event-type" name="event-type"
+                                            class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                                        <option value="">Select one...</option>
+                                        <option value="corporate">Corporate Event</option>
+                                        <option value="private">Private Gathering</option>
+                                        <option value="popup">Public Pop-Up</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="guests" class="block text-navy font-bold mb-2 text-sm">Number of Guests</label>
+                                    <input type="number" id="guests" name="guests" min="1"
+                                           class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-navy font-bold mb-2 text-sm">Additional Details</label>
+                                    <textarea id="message" name="message" rows="4"
+                                              class="w-full px-4 py-3 border border-slate-300 rounded focus:outline-none focus:border-orange"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-orange text-white py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform">
+                                    Send Request
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-navy rounded-xl p-8 text-cream">
+                        <h3 class="text-2xl text-cream mb-6 text-center">get in touch</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Email</p>
+                                <a href="mailto:isaiah@cooperscoffeenc.com" class="text-cream text-base hover:text-orange transition block">
+                                    isaiah@cooperscoffeenc.com
+                                </a>
+
+                                <p class="text-xs uppercase tracking-wider opacity-70 mt-4 mb-2">Phone</p>
+                                <a href="tel:+13366874607" class="text-cream text-base hover:text-orange transition block">
+                                    (336) 687-4607
+                                </a>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-wider opacity-70 mb-2">Follow Along</p>
+                                <div class="space-y-1">
+                                    <a href="https://www.instagram.com/cooperscoffeenc" target="_blank" rel="noopener noreferrer" class="block hover:text-orange transition">Instagram</a>
+                                    <a href="https://www.tiktok.com/@cooperscoffeenc" target="_blank" rel="noopener noreferrer" class="block hover:text-orange transition">TikTok</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- Footer — navy -->
     <footer class="bg-navy py-10 px-10 text-cream">
@@ -368,13 +424,13 @@
                 <p class="opacity-80 text-sm">mobile espresso catering serving<br>north carolina</p>
             </div>
             <div class="hidden md:flex items-center w-full h-full justify-center">
-                <img src="./images/ears.png" alt="Cooper's Ears" class="h-14 w-auto">
+                <img src="./images/ears.png" alt="Cooper's Ears" class="h-14 w-auto" width="56" height="56" loading="lazy">
             </div>
             <div class="w-full md:w-1/2 md:text-right">
                 <h3 class="text-xl text-orange mb-4">follow the journey</h3>
                 <div class="flex md:justify-end space-x-6">
-                    <a href="https://www.instagram.com/cooperscoffeenc" class="hover:text-orange transition opacity-80 text-sm">instagram</a>
-                    <a href="https://www.tiktok.com/@cooperscoffeenc" class="hover:text-orange transition opacity-80 text-sm">tiktok</a>
+                    <a href="https://www.instagram.com/cooperscoffeenc" target="_blank" rel="noopener noreferrer" class="hover:text-orange transition opacity-80 text-sm">instagram</a>
+                    <a href="https://www.tiktok.com/@cooperscoffeenc" target="_blank" rel="noopener noreferrer" class="hover:text-orange transition opacity-80 text-sm">tiktok</a>
                 </div>
                 <p class="mt-4 text-orange text-sm opacity-90">isaiah@cooperscoffeenc.com</p>
             </div>
